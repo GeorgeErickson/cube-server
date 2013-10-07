@@ -4,12 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "./node_modules/.bin/nf start"
   },
   "author": "George Erickson",
   "dependencies": {
     "cube": "~0.2.12",
-    "config": "~0.4.30",
-    "config-heroku": "~0.1.1-a"
+    "foreman": "0.0.25"
   }
 }
