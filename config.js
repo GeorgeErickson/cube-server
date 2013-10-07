@@ -1,5 +1,5 @@
 module.exports = {
   'mongo-url': process.env.MONGO_URL,
-  'http-port': 1080,
-  'udp-port': 1180
+  'http-port': process.env.PORT,
+  'udp-port': process.env.PORT + 100
 }
