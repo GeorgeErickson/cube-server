@@ -8,8 +8,7 @@
   },
   "author": "George Erickson",
   "dependencies": {
-    "cube": "~0.2.12",
-    "foreman": "0.0.25"
+    "cube": "~0.2.12"
   },
   "subdomain": "drinkin-cube-server",
   "engines": {

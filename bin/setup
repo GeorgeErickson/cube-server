@@ -1,0 +1,14 @@
+# #!/usr/bin/env bash
+collector=cube-collector-drinkin
+evaluator=cube-evaluator-drinkin
+
+heroku apps:create $collector --remote collector
+heroku apps:create $evaluator --remote evaluator
+
+heroku config:set CUBE_TYPE=collector -a $collector
+heroku config:set CUBE_TYPE=evaluator -a $evaluator
+
+heroku addons:add mongohq -a $evaluator
+MONGO_URL=$(heroku config:get MONGOHQ_URL -a $evaluator)
+heroku config:set MONGO_URL=$MONGO_URL -a $collector
+heroku config:set MONGO_URL=$MONGO_URL -a $evaluator

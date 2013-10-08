@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+git push collector &
+git push evaluator &
+
+wait
+echo 'Deployed'
